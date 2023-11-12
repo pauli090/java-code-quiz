@@ -22,7 +22,9 @@ function countdown() {
       
         if(timeLeft === 0 || questionNow === questions.length) {
         // Stops execution of action at set interval
+            finalScoreEl.textContent = timeLeft;
             clearInterval(timerInterval);
+            
         } 
     }, 1000);
 }
@@ -83,7 +85,6 @@ function theEnd() {
     startScreen.style.display = "none";
     feedbackEl.style.display = "none";
     endScreen.style.display = "block";
-    finalScoreEl.textContent = timeLeft;
 }
 
 function saveFinalScore() {
